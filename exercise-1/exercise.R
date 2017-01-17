@@ -6,10 +6,10 @@ points <- c(12, 3, 37, 27, 26, 6, 20, 31, 26, 5, 40, 10, 24, 31, 25, 26, 20)
 
 # Create a vector of the number of points the Seahwaks have allowed to be scored
 # against them in each game this season
-points.allowed <- c(10, 9, 18, 17, 24, 6, 25, 25, 24, 15, 14, 7, 38, 3, 34, 23, 6, 36)
+points.allowed <- c(10, 9, 18, 17, 24, 6, 25, 25, 24, 15, 14, 7, 38, 3, 34, 23, 36)
 
 # Combine your two vectors into a dataframe
-games <- data.frame(point, points.allowed)
+games <- data.frame(points, points.allowed)
 
 # Create a new column "diff" that is the difference in points.
 # Hint: recall the syntax for assigning new elements (which in this case will be
