@@ -29,7 +29,7 @@ salaries$got.raisw <- salaries$raise > 0
 salary.57 <- salaries[salaries$employees == "Employee 57",'salaries.2015']
 
 # How many employees got a raise?
-nrow(salaries[salaries$got.raisw == TRUE])
+nrow(salaries[salaries$got.raise == TRUE])
 
 # What was the value of the highest raise?
 highest.raise <- max(salaries$raise)
@@ -55,4 +55,4 @@ write.csv(salaries, 'salaries.csv')
 avg.loss <- mean(salaries$raise[salaries$got.raise == FALSE])
 
 # Is that what you expected them to lose based on how you generated their salaries?
-Nope
+# Nope
