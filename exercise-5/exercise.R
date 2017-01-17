@@ -1,4 +1,4 @@
-# Exercise 5: Gates Foundation Educational Grants
+# Exercise 5: Popular Baby Names Over Time
 
 # Read in the female baby names .csv file into a variable called `female.names`
 # Remember to not load the strings as factors!
@@ -33,6 +33,9 @@ MostPopular <- function(my.year){
 
 # What was the most popular female name in 1994?
 most.popular.1994 <- MostPopular(1994)
+
+
+### Bonus ###
 
 # Write a function `how.popular` that takes in a name and a year, and returns
 # a sentence with how popular that name was in that year

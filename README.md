@@ -7,13 +7,13 @@ In this module, we'll begin working with data frame objects, which are a major d
 **Contents**
 
 - [Resources](#resources)
-- [Lists](#lists)
 - [Data Frames](#data-frames)
   - [Creating Data Frames](#creating-data-frames)
-  - [Describing Dataframes](#describing-dataframes)
+  - [Describing Structure of Data Frames](#describing-structure-of-data-frames)
   - [Accessing Data in Data Frames](#accessing-data-in-data-frames)
-- [Reading CSV Data](#reading-csv-data)
-  - [Factor Variables](#factor-variables)
+- [Working with CSV Data](#working-with-csv-data)
+  - [Working Directory](#working-directory)
+- [Factor Variables](#factor-variables)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -168,7 +168,7 @@ Again, we're using the `stringsAsFactors` argument to make sure string data is s
 **Important Note**: If for whatever reason an element is missing from a data frame (which is very common with real world data!), R will fill that cell with the logical value `NA` (distinct from the string `"NA"`), meaning "**N**ot **A**vailable". There are multiple ways to handle this in an analysis; see [this link](http://www.statmethods.net/input/missingdata.html) among others for details.
 
 
-#### Working Directory
+### Working Directory
 The biggest complication when loading `.csv` files is that the `read.csv()` function takes as an argument a **path** to the file. Because we want this script to work on any computer (easy collaboration&mdash;also grading), we want to make sure we use a **relative path** to the file. The question is: relative to what?
 
 Like the command-line, the R interpreter (running along with R Studio) has a **current working directory** from which all file paths are relative. The trick is that ___the working directory is not the directory of the current script!___.
@@ -192,7 +192,7 @@ You should do this whenever you hit a "path" problem when loading external files
 
 For practice reading and working with data, see [exercise-3](exercise-3) and [exercise-4](exercise-4).
 
-### Factor Variables
+## Factor Variables
 **Factors** are a way of _optimizing_ variables that consist of a finite set of categories (i.e., they are **categorical (nominal) variables**).
 
 For example, imagine that you had a vector of shirt sizes which could only take on the values `small`, `medium`, or `large`. If you were working with a large dataset (thousands of shirts!), it would end up taking up a lot of memory to store the character strings for each one of those variables.

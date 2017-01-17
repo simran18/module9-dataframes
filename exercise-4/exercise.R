@@ -1,4 +1,4 @@
-# Exercise 4: Working with Data Frames
+# Exercise 4: Gates Foundation Educational Grants
 
 # Read the data from the `data/gates_money.csv` file into a variable called
 # `grants` using the `read.csv()` function
@@ -14,6 +14,8 @@ organization <- grants$organization
 # Confirm that the "organization" column is a vector using the `is.vector()`
 # This is a useful debugging tip if you hit errors later!
 is.vector(organization)
+
+### Now you can ask some more interesting questions about the dataset.  Store your answers in variables ###
 
 # What was the mean grant value?
 mean.spending <- mean(grants$total_amount)
