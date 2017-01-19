@@ -17,7 +17,6 @@ colnames(us.exp)
 
 # Why are they so strange? Think about whether you could use a number like 1940
 # with dollar notation!
-#Yes I could
 
 # What are the row names of your dataframe?
 rownames(us.exp)
@@ -26,7 +25,7 @@ rownames(us.exp)
 us.exp$category <- rownames(us.exp)
 
 # How much money was spent on personal care in 1940?
-care.1940 <- us.exp['Personal Care', 'X1960']
+care.1940 <- us.exp['Personal Care', 'X1940']
 
 # How much money was spent on Food and Tobacco in 1960?
 food.1960 <- us.exp['Food and Tobacco', 'X1960']
@@ -38,7 +37,7 @@ highest.1960 <- us.exp$category[us.exp$X1960 == max(us.exp$X1960)]
 # Define a function `DetectHighest` that takes in a year as a parameter, and
 # returns the highest spending category of that year
 DetectHighest <- function(year) {
-  col <- paste0('X', year)
+  col <- paste0('X',year)
   return( us.exp$category[us.exp[,col] == max(us.exp[,col])] )
 }
 
